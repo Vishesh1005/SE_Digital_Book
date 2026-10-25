@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Software Testing: Techniques, Types, and Best Practices</title>
+<meta name="description" content="An interactive digital book on software testing for MCA Software Engineering.">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.page[hidden]{display:block!important}.page{position:static;margin-bottom:1rem}.book{height:auto;max-height:none;display:block}body{height:auto;overflow:auto}.toolbar-actions,.controls{display:none}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#book">Skip to the book</a>
+
+<header class="toolbar" role="banner">
+  <button class="btn" id="tocBtn" aria-expanded="false" aria-controls="toc" title="Table of contents">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Contents</span>
+  </button>
+  <div class="toolbar-title">Software Testing <small>Software Engineering | MCA</small></div>
+  <div class="toolbar-actions">
+    <button class="btn icon" id="themeBtn" aria-pressed="false" title="Toggle light/dark reading mode" aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+    <button class="btn icon" id="fsBtn" title="Toggle fullscreen" aria-label="Toggle fullscreen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+    <button class="btn icon" id="printBtn" title="Print or save as PDF" aria-label="Print or save as PDF">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="toc" id="toc" aria-label="Table of contents" hidden>
+  <h2>Contents</h2>
+  <ol id="tocList"></ol>
+</nav>
+<div class="scrim" id="scrim" hidden></div>
+
+<main class="stage">
+  <div class="book" id="book" aria-label="Digital book" tabindex="-1">
+
+    <!-- PAGE 1: COVER -->
+    <section class="page cover" id="page-1" data-title="Cover" aria-labelledby="t1">
+      <div class="page-inner cover-inner">
+      <div class="cover-art" aria-hidden="true">
+        <svg viewBox="0 0 220 150">
+          <rect x="6" y="6" width="208" height="138" rx="12" fill="rgba(255,255,255,.12)"/>
+          <rect x="0" y="0" width="208" height="138" rx="12" fill="#f4f7fb"/>
+          <rect x="0" y="0" width="208" height="22" rx="12" fill="#e4eaf3"/><rect x="0" y="10" width="208" height="12" fill="#e4eaf3"/>
+          <circle cx="14" cy="11" r="3.5" fill="#e57373"/><circle cx="26" cy="11" r="3.5" fill="#f2c14e"/><circle cx="38" cy="11" r="3.5" fill="#6fbf8b"/>
+          <rect x="16" y="36" width="72" height="7" rx="3.5" fill="#1f7a8c"/>
+          <rect x="30" y="52" width="100" height="7" rx="3.5" fill="#1b3556"/>
+          <rect x="30" y="68" width="62" height="7" rx="3.5" fill="#8b95a3"/>
+          <rect x="44" y="84" width="88" height="7" rx="3.5" fill="#1b3556"/>
+          <rect x="16" y="100" width="66" height="7" rx="3.5" fill="#1f7a8c"/>
+          <circle cx="150" cy="112" r="14" fill="#b3412f"/><path d="M144 106l12 12M156 106l-12 12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="184" cy="112" r="14" fill="#2e7d4f"/><path d="M177 112l5 5 9-11" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <p class="eyebrow">Digital book | Software Engineering</p>
+      <h1 id="t1">Software Testing: <span>Techniques, Types, and Best Practices</span></h1>
+      <p class="subtitle">An Introduction to Software Quality Assurance</p>
+      <p class="chip">Subject: Software Engineering</p>
+      <dl class="details">
+        <div><dt>Student Name</dt><dd><span class="editable" contenteditable="true" role="textbox" aria-label="Student name" data-key="name" data-ph="Click to enter your name" spellcheck="false"></span></dd></div>
+        <div><dt>Course</dt><dd><span class="editable" contenteditable="true" role="textbox" aria-label="Course" data-key="course" data-ph="e.g. MCA, Semester" spellcheck="false"></span></dd></div>
+        <div><dt>Submission Date</dt><dd><span class="editable" contenteditable="true" role="textbox" aria-label="Submission date" data-key="date" data-ph="Click to enter the date" spellcheck="false"></span></dd></div>
+      </dl>
+      <p class="hint">Tip: click a line above to edit it. Use the arrow keys or the buttons below to turn pages.</p>
+    </div>
+    </section>
+
+    <!-- PAGE 2: INTRODUCTION -->
+    <section class="page" id="page-2" data-title="Introduction to Software Testing" aria-labelledby="t2" hidden>
+      <div class="page-inner">
+        <h2 id="t2"><span class="num">1</span> Introduction to Software Testing</h2>
+
+        <h3>What is software testing?</h3>
+        <p>Software testing is the process of evaluating a software product to check whether it behaves as required and to find defects before users do. The International Software Testing Qualifications Board [ISTQB] (2023) explains that testing includes <em>dynamic</em> activities, where the software is executed, and <em>static</em> activities, such as reviewing requirements and code.</p>
+        <div class="callout"><strong>Key terms.</strong> An <b>error</b> is a human mistake; it may introduce a <b>defect</b> (bug) into the code; when that code runs, it may cause a <b>failure</b>, a visible difference from the expected behaviour (ISTQB, n.d.).</div>
+
+        <h3>Objectives and importance</h3>
+        <ul class="ticks">
+          <li><b>Find defects early.</b> Faults found in requirements or design cost less to fix than faults found after release (ISTQB, 2023; Pressman &amp; Maxim, 2020).</li>
+          <li><b>Show that requirements are met.</b> Sommerville (2016) describes testing as a way to show developers and customers that the software meets its requirements and to reveal incorrect behaviour.</li>
+          <li><b>Support decisions and reduce risk.</b> Test results give managers evidence for release decisions and lower the chance of failures in live use (ISTQB, 2023).</li>
+        </ul>
+        <p>Testing has limits: it can show that defects exist, but it cannot prove that none remain (ISTQB, 2023; Sommerville, 2016). Bertolino (2007) observed that testing is widely used in industry, yet is still largely ad hoc and expensive, so it must be done systematically.</p>
+
+        <h3>Role of testing in the SDLC</h3>
+        <p>The Software Development Life Cycle (SDLC) is the series of phases through which software is planned, built, delivered, and maintained. Testing has its own phase, but it is not only a final step: <em>verification</em> asks &ldquo;Are we building the product right?&rdquo; and <em>validation</em> asks &ldquo;Are we building the right product?&rdquo; (Sommerville, 2016). In agile and iterative models, testing is repeated in every iteration (ISTQB, 2023).</p>
+
+        <figure>
+          <svg class="diagram" viewBox="0 0 640 150" role="img" aria-labelledby="sdlcT sdlcD">
+            <title id="sdlcT">SDLC diagram</title>
+            <desc id="sdlcD">Six SDLC phases in a row: requirements, design, implementation, testing (highlighted), deployment, and maintenance. Feedback arrows return from testing to implementation and design.</desc>
+            <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" class="ar"/></marker></defs>
+            <g class="ph">
+              <rect x="6" y="30" width="92" height="52" rx="8"/><text x="52" y="52">Requirements</text><text x="52" y="68" class="sm">analysis</text>
+              <rect x="112" y="30" width="92" height="52" rx="8"/><text x="158" y="52">Design</text><text x="158" y="68" class="sm">architecture</text>
+              <rect x="218" y="30" width="92" height="52" rx="8"/><text x="264" y="52">Implementation</text><text x="264" y="68" class="sm">coding</text>
+              <rect x="324" y="22" width="104" height="68" rx="10" class="hl"/><text x="376" y="52" class="b">Testing</text><text x="376" y="69" class="sm2">verify &amp; validate</text>
+              <rect x="442" y="30" width="92" height="52" rx="8"/><text x="488" y="52">Deployment</text><text x="488" y="68" class="sm">release</text>
+              <rect x="548" y="30" width="86" height="52" rx="8"/><text x="591" y="52">Maintenance</text><text x="591" y="68" class="sm">changes</text>
+            </g>
+            <g class="ln"><path d="M98 56h14" marker-end="url(#ah)"/><path d="M204 56h14" marker-end="url(#ah)"/><path d="M310 56h14" marker-end="url(#ah)"/><path d="M428 56h14" marker-end="url(#ah)"/><path d="M534 56h14" marker-end="url(#ah)"/></g>
+            <path d="M376 90v26H264v-34" class="fb" marker-end="url(#ah)"/>
+            <path d="M376 116H158v-34" class="fb" marker-end="url(#ah)"/>
+            <text x="320" y="138" class="cap-s" text-anchor="middle">Defects found in testing send work back to coding or design</text>
+          </svg>
+          <figcaption><b>Figure 1.</b> A simple SDLC with the testing phase highlighted. Test activities such as reviews also start earlier (ISTQB, 2023).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PAGE 3: TYPES -->
+    <section class="page" id="page-3" data-title="Types and Techniques of Testing" aria-labelledby="t3" hidden>
+      <div class="page-inner">
+        <h2 id="t3"><span class="num">2</span> Types and Techniques of Testing</h2>
+        <p>Tests can be grouped by <b>level</b> (when and how large a part of the system is tested) and by <b>approach</b> (how test cases are designed). ISTQB (2023) uses the term <em>component testing</em> for what many books call unit testing.</p>
+
+        <h3>Test levels</h3>
+        <div class="cards">
+          <article class="card c1"><span class="lvl">1</span><h4>Unit testing</h4><p>Checks the smallest parts, such as functions or classes, in isolation; usually done by developers (Pressman &amp; Maxim, 2020, Ch. 19).</p><p class="ex"><b>Example:</b> a GST function given 1000 at 18% must return 1180.</p></article>
+          <article class="card c2"><span class="lvl">2</span><h4>Integration testing</h4><p>Checks that tested units work together, especially at interfaces and in the data they exchange (Pressman &amp; Maxim, 2020, Ch. 20).</p><p class="ex"><b>Example:</b> a valid login returns the correct user record from the database.</p></article>
+          <article class="card c3"><span class="lvl">3</span><h4>System testing</h4><p>Tests the complete system against its requirements, including performance and security (ISTQB, 2023; Sommerville, 2016).</p><p class="ex"><b>Example:</b> search, add to cart, pay, and receive an order e-mail.</p></article>
+          <article class="card c4"><span class="lvl">4</span><h4>Acceptance testing</h4><p>Lets the customer or users decide whether the system meets their needs; a common form is user acceptance testing, or UAT (ISTQB, 2023).</p><p class="ex"><b>Example:</b> staff try a new admission portal with real forms.</p></article>
+        </div>
+
+        <h3>Test approaches</h3>
+        <div class="table-wrap">
+          <table>
+            <caption><b>Table 1.</b> Black-box and white-box testing compared (ISTQB, 2023; Pressman &amp; Maxim, 2020, Ch. 19).</caption>
+            <thead><tr><th scope="col">Aspect</th><th scope="col">Black-box testing</th><th scope="col">White-box testing</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Basis for tests</th><td>Requirements and specifications</td><td>Source code and control flow</td></tr>
+              <tr><th scope="row">Code knowledge</th><td>Not needed</td><td>Needed</td></tr>
+              <tr><th scope="row">Common techniques</th><td>Equivalence partitioning, boundary value analysis, decision tables</td><td>Statement coverage, branch coverage</td></tr>
+              <tr><th scope="row">Simple example</th><td>An age field accepts 18&ndash;60. Test 17, 18, 60, 61: reject, accept, accept, reject.</td><td>For <code>if (marks &gt;= 40)</code>, use marks = 75 and marks = 20 to cover both branches.</td></tr>
+              <tr><th scope="row">Limitation</th><td>Some code paths may stay untested.</td><td>Cannot reveal a missing requirement.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Both approaches can be used at any test level.</p>
+      </div>
+    </section>
+
+    <!-- PAGE 4: WORKFLOW -->
+    <section class="page" id="page-4" data-title="Testing Workflow and Best Practices" aria-labelledby="t4" hidden>
+      <div class="page-inner">
+        <h2 id="t4"><span class="num">3</span> Testing Workflow and Best Practices</h2>
+
+        <h3>The test workflow</h3>
+        <ol class="steps">
+          <li><b>Plan</b><span>Set objectives, scope, and approach</span></li>
+          <li><b>Prepare</b><span>Analyse, then write test cases and data</span></li>
+          <li><b>Execute</b><span>Run tests; compare actual and expected results</span></li>
+          <li><b>Report</b><span>Log defects; track them to closure</span></li>
+          <li><b>Complete</b><span>Summarise results and lessons</span></li>
+        </ol>
+        <p class="small">These stages follow the main activities of the ISTQB (2023) test process. A <b>test case</b> holds preconditions, inputs, and expected results (ISTQB, n.d.). A <b>defect report</b> gives an ID, title, environment, steps to reproduce, expected and actual results, and severity (ISTQB, 2023).</p>
+
+        <div class="two">
+          <div class="box"><h4>Regression testing</h4><p>Re-running earlier tests after a change to confirm that nothing that worked before has broken (ISTQB, n.d.).</p></div>
+          <div class="box"><h4>Automation testing</h4><p>Tools such as JUnit, pytest, or Selenium run repetitive tests quickly. Automation needs setup and upkeep, so teams must choose what to automate (Garousi &amp; M&auml;ntyl&auml;, 2016).</p></div>
+        </div>
+
+        <h3>Best practices</h3>
+        <ul class="checks">
+          <li>Test early; review requirements before coding (ISTQB, 2023).</li>
+          <li>Link each test to a requirement.</li>
+          <li>Test high-risk features first (ISTQB, 2023).</li>
+          <li>Include boundary and invalid inputs.</li>
+          <li>Automate stable, repetitive tests.</li>
+          <li>Refresh tests, as old tests find fewer new defects (ISTQB, 2023).</li>
+        </ul>
+
+        <section class="example" aria-labelledby="exT">
+          <h3 id="exT">Practical example: online shopping checkout <small>(illustrative, prepared for this assignment)</small></h3>
+          <p>Rule: total = (items &minus; 10% coupon) + Rs. 50 delivery. Cart: Rs. 2,000 of items.</p>
+          <div class="table-wrap">
+            <table class="compact">
+              <caption><b>Table 2.</b> Checkout test cases.</caption>
+              <thead><tr><th scope="col">ID</th><th scope="col">Scenario</th><th scope="col">Expected</th><th scope="col">Actual</th><th scope="col">Result</th></tr></thead>
+              <tbody>
+                <tr><td>TC-01</td><td>Apply coupon, then add delivery</td><td>Total Rs. 1,850</td><td>Total Rs. 1,845</td><td><span class="tag fail">Fail</span></td></tr>
+                <tr><td>TC-02</td><td>Card payment declined</td><td>Error shown; no order created</td><td>Order confirmed</td><td><span class="tag fail">Fail</span></td></tr>
+                <tr><td>TC-03</td><td>Pay with valid card</td><td>Order confirmed</td><td>Order confirmed</td><td><span class="tag pass">Pass</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small"><b>DEF-204 (medium):</b> the 10% discount was applied after delivery was added, giving Rs. 1,845 instead of Rs. 1,850. <b>DEF-205 (high):</b> a declined payment still creates a paid order. Developers fix both defects, testers re-run TC-01 to TC-03, and the full checkout suite is repeated as regression testing and then automated.</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- PAGE 5: CONCLUSION -->
+    <section class="page" id="page-5" data-title="Conclusion and References" aria-labelledby="t5" hidden>
+      <div class="page-inner">
+        <h2 id="t5"><span class="num">4</span> Conclusion and References</h2>
+        <p>Software testing is a planned activity that finds defects and builds confidence in quality. It spans the whole SDLC, works at four levels, uses black-box and white-box designs, and is run through a clear workflow supported by automation.</p>
+        <h3>Key takeaways</h3>
+        <div class="takeaways">
+          <div><b>Test early</b><span>Early defects are cheaper to fix.</span></div>
+          <div><b>Four levels</b><span>Unit, integration, system, acceptance.</span></div>
+          <div><b>Two approaches</b><span>Black-box and white-box.</span></div>
+          <div><b>Report clearly</b><span>Precise defect reports save time.</span></div>
+          <div><b>Automate wisely</b><span>Best for repeated regression tests.</span></div>
+          <div><b>Never &ldquo;bug-free&rdquo;</b><span>Testing cannot prove zero defects.</span></div>
+        </div>
+
+        <h3>References</h3>
+        <ul class="refs">
+          <li>Bertolino, A. (2007). Software testing research: Achievements, challenges, dreams. In <i>Future of software engineering (FOSE &rsquo;07)</i> (pp. 85&ndash;103). IEEE. <a href="https://doi.org/10.1109/FOSE.2007.25" target="_blank" rel="noopener">https://doi.org/10.1109/FOSE.2007.25</a></li>
+          <li>Garousi, V., &amp; M&auml;ntyl&auml;, M. V. (2016). When and what to automate in software testing? A multi-vocal literature review. <i>Information and Software Technology, 76</i>, 92&ndash;117. <a href="https://doi.org/10.1016/j.infsof.2016.04.015" target="_blank" rel="noopener">https://doi.org/10.1016/j.infsof.2016.04.015</a></li>
+          <li>International Software Testing Qualifications Board. (n.d.). <i>ISTQB glossary</i>. Retrieved October 25, 2026, from <a href="https://glossary.istqb.org/" target="_blank" rel="noopener">https://glossary.istqb.org/</a></li>
+          <li>International Software Testing Qualifications Board. (2023). <i>Certified Tester Foundation Level syllabus (Version 4.0)</i>. <a href="https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/" target="_blank" rel="noopener">https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/</a></li>
+          <li>Pressman, R. S., &amp; Maxim, B. R. (2020). <i>Software engineering: A practitioner&rsquo;s approach</i> (9th ed.). McGraw-Hill Education.</li>
+          <li>Sommerville, I. (2016). <i>Software engineering</i> (10th ed.). Pearson.</li>
+        </ul>
+        <p class="note">Examples in this book are illustrative and were created for teaching. Links open the publisher or standards body page; the two textbooks are print sources.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="controls">
+  <div class="progress" id="progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20"><div id="bar"></div></div>
+  <div class="nav">
+    <button class="btn nav-btn" id="prevBtn" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Previous</span></button>
+    <p class="indicator" id="indicator" aria-live="polite">Page 1 of 5</p>
+    <button class="btn nav-btn" id="nextBtn" aria-label="Next page"><span>Next</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
