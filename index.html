@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Software Development Methodologies: From Waterfall to Agile and DevOps</title>
+<meta name="description" content="An interactive digital book on software development methodologies (Waterfall, RAD, Agile, Scrum, DevOps, and Fish Model) for MCA Software Engineering.">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.page[hidden]{display:block!important}.page{position:static;margin-bottom:1rem}.book{height:auto;max-height:none;display:block}body{height:auto;overflow:auto}.toolbar-actions,.controls{display:none}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#book">Skip to the book</a>
+
+<header class="toolbar" role="banner">
+  <button class="btn" id="tocBtn" aria-expanded="false" aria-controls="toc" title="Table of contents">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Contents</span>
+  </button>
+  <div class="toolbar-title">Software Development Methodologies <small>Software Engineering | MCA</small></div>
+  <div class="toolbar-actions">
+    <button class="btn icon" id="themeBtn" aria-pressed="false" title="Toggle light/dark reading mode" aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+    </button>
+    <button class="btn icon" id="fsBtn" title="Toggle fullscreen" aria-label="Toggle fullscreen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>
+    </button>
+    <button class="btn icon" id="printBtn" title="Print or save as PDF" aria-label="Print or save as PDF">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H4v-7h16v7h-3M7 14h10v7H7z"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="toc" id="toc" aria-label="Table of contents" hidden>
+  <h2>Contents</h2>
+  <ol id="tocList"></ol>
+</nav>
+<div class="scrim" id="scrim" hidden></div>
+
+<main class="stage">
+  <div class="book" id="book" aria-label="Digital book" tabindex="-1">
+
+    <!-- PAGE 1: COVER -->
+    <section class="page cover" id="page-1" data-title="Cover" aria-labelledby="t1">
+      <div class="page-inner cover-inner">
+        <div class="cover-art" aria-hidden="true">
+          <svg viewBox="0 0 220 150">
+            <rect x="6" y="6" width="208" height="138" rx="12" fill="rgba(255,255,255,.12)"/>
+            <rect x="0" y="0" width="208" height="138" rx="12" fill="#f4f7fb"/>
+            <rect x="0" y="0" width="208" height="22" rx="12" fill="#e4eaf3"/><rect x="0" y="10" width="208" height="12" fill="#e4eaf3"/>
+            <circle cx="14" cy="11" r="3.5" fill="#e57373"/><circle cx="26" cy="11" r="3.5" fill="#f2c14e"/><circle cx="38" cy="11" r="3.5" fill="#6fbf8b"/>
+            <!-- Waterfall steps on left -->
+            <rect x="14" y="32" width="46" height="14" rx="3.5" fill="#1b3556"/>
+            <rect x="28" y="52" width="46" height="14" rx="3.5" fill="#1f7a8c"/>
+            <rect x="42" y="72" width="46" height="14" rx="3.5" fill="#c77d14"/>
+            <rect x="56" y="92" width="46" height="14" rx="3.5" fill="#2e7d4f"/>
+            <path d="M37 46v6h-5M51 66v6h-5M65 86v6h-5" stroke="#8b95a3" stroke-width="2" fill="none"/>
+            <!-- Agile & DevOps loop on right -->
+            <circle cx="154" cy="66" r="24" fill="none" stroke="#1f7a8c" stroke-width="5" stroke-dasharray="115 25"/>
+            <path d="M174 48l6 3-5 6" fill="#1f7a8c"/>
+            <circle cx="154" cy="66" r="9" fill="#1b3556"/>
+            <rect x="122" y="106" width="70" height="18" rx="9" fill="#2e7d4f"/>
+            <path d="M134 115l4 4 8-8" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <rect x="150" y="112" width="32" height="6" rx="3" fill="#fff"/>
+          </svg>
+        </div>
+        <p class="eyebrow">Digital book | Software Engineering</p>
+        <h1 id="t1">Software Development Methodologies: <span>From Waterfall to Agile and DevOps</span></h1>
+        <p class="subtitle">A Concise Guide to Traditional, Iterative, Agile, and Modern Delivery Models</p>
+        <p class="chip">Subject: Software Engineering</p>
+        <dl class="details">
+          <div><dt>Student Name</dt><dd><span class="editable" contenteditable="true" role="textbox" aria-label="Student name" data-key="name" data-ph="Click to enter your name" spellcheck="false"></span></dd></div>
+          <div><dt>Course</dt><dd><span class="editable" contenteditable="true" role="textbox" aria-label="Course" data-key="course" data-ph="e.g. MCA, Semester" spellcheck="false"></span></dd></div>
+          <div><dt>Submission Date</dt><dd><span class="editable" contenteditable="true" role="textbox" aria-label="Submission date" data-key="date" data-ph="Click to enter the date" spellcheck="false"></span></dd></div>
+        </dl>
+        <p class="hint">Tip: click a line above to edit it. Use the arrow keys or the buttons below to turn pages.</p>
+      </div>
+    </section>
+
+    <!-- PAGE 2: TRADITIONAL METHODOLOGIES -->
+    <section class="page" id="page-2" data-title="Traditional Methodologies" aria-labelledby="t2" hidden>
+      <div class="page-inner">
+        <h2 id="t2"><span class="num">1</span> Traditional Methodologies</h2>
+
+        <h3>1.1 Introduction to software development methodologies</h3>
+        <p>A <b>software development methodology</b> (or <em>process model</em>) is a structured framework that defines the tasks, milestones, deliverables, and roles needed to build and maintain high-quality software across the Software Development Life Cycle (SDLC) (Pressman &amp; Maxim, 2020; Sommerville, 2016). Despite differing structures, all methodologies address four fundamental activities: <em>specification</em>, <em>development</em>, <em>validation</em>, and <em>evolution</em> (Sommerville, 2016).</p>
+        <div class="callout"><strong>Key distinction.</strong> In <b>plan-driven</b> processes, all stages are planned in advance and progress is measured against that plan. In <b>agile</b> processes, planning is incremental and adapts readily to changing customer needs (Sommerville, 2016).</div>
+
+        <h3>1.2 The Waterfall model</h3>
+        <p>First described by Royce (1970) and widely adopted for large engineering projects, the <b>Waterfall model</b> organises the SDLC into linear, sequential phases in which each phase produces signed-off documentation before the next begins (Pressman &amp; Maxim, 2020; Sommerville, 2016).</p>
+        <ul class="ticks">
+          <li><b>Strengths.</b> Clear milestones, comprehensive documentation, and strong discipline for systems with stable requirements or strict safety and regulatory standards (Sommerville, 2016).</li>
+          <li><b>Limitations.</b> Working software appears late in the project, and accommodating mid-project requirement changes requires costly rework across prior baselines (Pressman &amp; Maxim, 2020).</li>
+        </ul>
+
+        <figure>
+          <svg class="diagram" viewBox="0 0 640 142" role="img" aria-labelledby="wfT wfD">
+            <title id="wfT">Interactive Waterfall workflow diagram</title>
+            <desc id="wfD">Six sequential Waterfall stages: Requirements, Design, Implementation, Testing, Deployment, and Maintenance, with verification feedback arrows.</desc>
+            <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" class="ar"/></marker></defs>
+            <g class="ph">
+              <g class="node-btn active" role="button" tabindex="0" aria-pressed="true" data-diagram="waterfall" data-stage="req">
+                <rect x="6" y="24" width="92" height="54" rx="8"/><text x="52" y="47">Requirements</text><text x="52" y="63" class="sm">1. SRS spec</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="waterfall" data-stage="des">
+                <rect x="112" y="24" width="92" height="54" rx="8"/><text x="158" y="47">Design</text><text x="158" y="63" class="sm">2. architecture</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="waterfall" data-stage="imp">
+                <rect x="218" y="24" width="96" height="54" rx="8"/><text x="266" y="47">Implementation</text><text x="266" y="63" class="sm">3. coding</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="waterfall" data-stage="tst">
+                <rect x="328" y="24" width="92" height="54" rx="8"/><text x="374" y="47">Testing</text><text x="374" y="63" class="sm">4. V &amp; V</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="waterfall" data-stage="dep">
+                <rect x="434" y="24" width="92" height="54" rx="8"/><text x="480" y="47">Deployment</text><text x="480" y="63" class="sm">5. release</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="waterfall" data-stage="mnt">
+                <rect x="540" y="24" width="94" height="54" rx="8"/><text x="587" y="47">Maintenance</text><text x="587" y="63" class="sm">6. support</text>
+              </g>
+            </g>
+            <g class="ln"><path d="M98 51h14" marker-end="url(#ah)"/><path d="M204 51h14" marker-end="url(#ah)"/><path d="M314 51h14" marker-end="url(#ah)"/><path d="M420 51h14" marker-end="url(#ah)"/><path d="M526 51h14" marker-end="url(#ah)"/></g>
+            <path d="M374 78v24H266V78" class="fb" marker-end="url(#ah)"/>
+            <path d="M374 102H158V78" class="fb" marker-end="url(#ah)"/>
+            <text x="320" y="128" class="cap-s" text-anchor="middle">Click any stage above (or button below) to inspect its deliverable and role in the Waterfall life cycle</text>
+          </svg>
+          <div class="stage-panel" aria-live="polite">
+            <div class="stage-panel-head">
+              <span class="stage-panel-title" id="waterfall-title">1. Requirements Analysis &amp; Specification</span>
+              <span class="stage-badge" id="waterfall-badge">Phase 1 of 6</span>
+            </div>
+            <p id="waterfall-desc">System services, constraints, and goals are gathered through stakeholder consultation and documented in a formal Software Requirements Specification (SRS) before design begins (Sommerville, 2016; Pressman &amp; Maxim, 2020).</p>
+            <div class="stage-pills" role="group" aria-label="Select Waterfall stage">
+              <button type="button" class="stage-pill" data-diagram="waterfall" data-stage="req" aria-pressed="true">1. Requirements</button>
+              <button type="button" class="stage-pill" data-diagram="waterfall" data-stage="des" aria-pressed="false">2. Design</button>
+              <button type="button" class="stage-pill" data-diagram="waterfall" data-stage="imp" aria-pressed="false">3. Implementation</button>
+              <button type="button" class="stage-pill" data-diagram="waterfall" data-stage="tst" aria-pressed="false">4. Testing</button>
+              <button type="button" class="stage-pill" data-diagram="waterfall" data-stage="dep" aria-pressed="false">5. Deployment</button>
+              <button type="button" class="stage-pill" data-diagram="waterfall" data-stage="mnt" aria-pressed="false">6. Maintenance</button>
+            </div>
+          </div>
+          <figcaption><b>Figure 1.</b> The linear Waterfall workflow with verification feedback loops (adapted from Royce, 1970; Sommerville, 2016).</figcaption>
+        </figure>
+
+        <h3>1.3 Rapid Application Development (RAD)</h3>
+        <p>Introduced by Martin (1991), <b>Rapid Application Development (RAD)</b> is an incremental, high-speed model that compresses delivery into short <b>60- to 90-day</b> cycles by combining interactive prototyping, reusable software components, and automated Fourth-Generation/CASE tools (Pressman &amp; Maxim, 2020).</p>
+        <ol class="steps">
+          <li><b>Requirements Planning</b><span>Joint JAD workshops define scope</span></li>
+          <li><b>User Design</b><span>Iterative screen &amp; data prototypes</span></li>
+          <li><b>Rapid Construction</b><span>Component assembly &amp; testing</span></li>
+          <li><b>Cutover</b><span>Acceptance testing &amp; live deployment</span></li>
+        </ol>
+        <p class="small"><b>When to use RAD:</b> Ideal for modular business information systems with committed user availability. It is unsuitable when technical risks are high, performance is safety-critical, or systems cannot be modularised (Pressman &amp; Maxim, 2020).</p>
+      </div>
+    </section>
+
+    <!-- PAGE 3: AGILE AND SCRUM -->
+    <section class="page" id="page-3" data-title="Agile and Scrum" aria-labelledby="t3" hidden>
+      <div class="page-inner">
+        <h2 id="t3"><span class="num">2</span> Agile and Scrum</h2>
+
+        <h3>2.1 Agile principles and iterative development</h3>
+        <p>To overcome the rigidity of heavyweight plan-driven models, seventeen practitioners published the <em>Manifesto for Agile Software Development</em> (Beck et al., 2001). Agile methodologies combine <b>iterative</b> (refining features through repeated cycles) and <b>incremental</b> (delivering working slices early) development across four core values (Beck et al., 2001; Sommerville, 2016):</p>
+        <ul class="checks">
+          <li><b>Individuals and interactions</b> over processes and tools.</li>
+          <li><b>Working software</b> over comprehensive documentation.</li>
+          <li><b>Customer collaboration</b> over contract negotiation.</li>
+          <li><b>Responding to change</b> over following a plan.</li>
+        </ul>
+        <p class="small">Twelve supporting principles guide agile teams to deliver working software frequently (from a couple of weeks to a couple of months), welcome changing requirements even late in development, and maintain a sustainable pace (Beck et al., 2001).</p>
+
+        <h3>2.2 The Scrum framework</h3>
+        <p><b>Scrum</b> is a lightweight framework for developing and sustaining complex products, founded on empirical process control—<em>transparency</em>, <em>inspection</em>, and <em>adaptation</em> (Schwaber &amp; Sutherland, 2020). A self-managing Scrum Team comprises a <b>Product Owner</b> (maximises value), a <b>Scrum Master</b> (fosters process effectiveness), and <b>Developers</b> (build a usable Increment each Sprint).</p>
+
+        <div class="cards">
+          <article class="card c1"><span class="lvl">1</span><h4>Product Backlog &amp; Sprint Planning</h4><p>The <b>Product Backlog</b> is an emergent, ordered list of product needs. In <b>Sprint Planning</b>, the team sets a Sprint Goal and selects items to form the Sprint Backlog (Schwaber &amp; Sutherland, 2020).</p></article>
+          <article class="card c2"><span class="lvl">2</span><h4>Sprint &amp; Daily Scrum</h4><p>A <b>Sprint</b> is a fixed timebox of one month or less (typically 2&ndash;4 weeks). Each day, Developers hold a 15-minute <b>Daily Scrum</b> to inspect progress toward the Sprint Goal and adapt their daily plan.</p></article>
+          <article class="card c3"><span class="lvl">3</span><h4>Sprint Review</h4><p>At the end of the Sprint, the Scrum Team and stakeholders inspect the working <b>Increment</b> and adapt the Product Backlog based on market and user feedback (Schwaber &amp; Sutherland, 2020).</p></article>
+          <article class="card c4"><span class="lvl">4</span><h4>Sprint Retrospective</h4><p>Before starting the <b>Next Sprint</b>, the team reflects on interactions, tools, and its <em>Definition of Done</em> to plan concrete quality and effectiveness improvements (Schwaber &amp; Sutherland, 2020).</p></article>
+        </div>
+
+        <figure>
+          <svg class="diagram" viewBox="0 0 640 148" role="img" aria-labelledby="scT scD">
+            <title id="scT">Interactive Scrum cycle diagram</title>
+            <desc id="scD">Scrum flow from Product Backlog to Sprint Planning, Sprint with Daily Scrum loop, Sprint Review, Sprint Retrospective, and Next Sprint.</desc>
+            <defs><marker id="ah2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" class="ar"/></marker></defs>
+            <g class="ph">
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="scrum" data-stage="backlog">
+                <rect x="6" y="34" width="92" height="54" rx="8"/><text x="52" y="56">Product</text><text x="52" y="71" class="sm">Backlog</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="scrum" data-stage="planning">
+                <rect x="112" y="34" width="92" height="54" rx="8"/><text x="158" y="56">Sprint</text><text x="158" y="71" class="sm">Planning</text>
+              </g>
+              <g class="node-btn active" role="button" tabindex="0" aria-pressed="true" data-diagram="scrum" data-stage="sprint">
+                <rect x="218" y="26" width="106" height="68" rx="10"/><text x="271" y="54">Sprint (1&ndash;4w)</text><text x="271" y="71" class="sm">15m Daily Scrum</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="scrum" data-stage="review">
+                <rect x="338" y="34" width="90" height="54" rx="8"/><text x="383" y="56">Sprint</text><text x="383" y="71" class="sm">Review</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="scrum" data-stage="retro">
+                <rect x="442" y="34" width="94" height="54" rx="8"/><text x="489" y="56">Retrospective</text><text x="489" y="71" class="sm">inspect &amp; adapt</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="scrum" data-stage="next">
+                <rect x="550" y="34" width="84" height="54" rx="8" class="teal-box"/><text x="592" y="56">Next</text><text x="592" y="71" class="sm">Sprint</text>
+              </g>
+            </g>
+            <!-- Daily Scrum 24h loop above Sprint -->
+            <path d="M250 26 C250 4, 292 4, 292 26" class="fb" marker-end="url(#ah2)"/>
+            <text x="271" y="12" class="cap-s" text-anchor="middle">24h Daily Scrum</text>
+            <!-- Main connectors -->
+            <g class="ln"><path d="M98 61h14" marker-end="url(#ah2)"/><path d="M204 61h14" marker-end="url(#ah2)"/><path d="M324 61h14" marker-end="url(#ah2)"/><path d="M428 61h14" marker-end="url(#ah2)"/><path d="M536 61h14" marker-end="url(#ah2)"/></g>
+            <!-- Feedback loop from Next Sprint / Review to Product Backlog & Sprint Planning -->
+            <path d="M592 88v24H158V88" class="fb" marker-end="url(#ah2)"/>
+            <text x="340" y="132" class="cap-s" text-anchor="middle">Click any Scrum artifact or event to inspect its purpose and timebox</text>
+          </svg>
+          <div class="stage-panel" aria-live="polite">
+            <div class="stage-panel-head">
+              <span class="stage-panel-title" id="scrum-title">Sprint &amp; Daily Scrum</span>
+              <span class="stage-badge" id="scrum-badge">Container Event (1&ndash;4 Weeks) + 15-min Daily</span>
+            </div>
+            <p id="scrum-desc">Fixed-length iteration turning selected items into a usable Increment. Every 24 hours, Developers hold a 15-minute Daily Scrum to inspect progress toward the Sprint Goal and adapt the Sprint Backlog (Schwaber &amp; Sutherland, 2020).</p>
+            <div class="stage-pills" role="group" aria-label="Select Scrum stage">
+              <button type="button" class="stage-pill" data-diagram="scrum" data-stage="backlog" aria-pressed="false">Product Backlog</button>
+              <button type="button" class="stage-pill" data-diagram="scrum" data-stage="planning" aria-pressed="false">Sprint Planning</button>
+              <button type="button" class="stage-pill" data-diagram="scrum" data-stage="sprint" aria-pressed="true">Sprint &amp; Daily Scrum</button>
+              <button type="button" class="stage-pill" data-diagram="scrum" data-stage="review" aria-pressed="false">Review</button>
+              <button type="button" class="stage-pill" data-diagram="scrum" data-stage="retro" aria-pressed="false">Retrospective</button>
+              <button type="button" class="stage-pill" data-diagram="scrum" data-stage="next" aria-pressed="false">Next Sprint</button>
+            </div>
+          </div>
+          <figcaption><b>Figure 2.</b> Interactive Scrum life cycle showing artifacts, events, and empirical feedback loops (Schwaber &amp; Sutherland, 2020).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PAGE 4: DEVOPS AND COMPARISON -->
+    <section class="page" id="page-4" data-title="DevOps and Comparison" aria-labelledby="t4" hidden>
+      <div class="page-inner">
+        <h2 id="t4"><span class="num">3</span> DevOps and Methodology Comparison</h2>
+
+        <h3>3.1 The DevOps lifecycle and CI/CD</h3>
+        <p><b>DevOps</b> unites software development (<em>Dev</em>) and IT operations (<em>Ops</em>) across people, processes, and technology to deliver reliable software continuously (Microsoft, 2023; Pressman &amp; Maxim, 2020). Its backbone is an automated <b>CI/CD pipeline</b>:</p>
+        <div class="two">
+          <div class="box"><h4>Continuous Integration (CI)</h4><p>Developers merge code changes into a shared repository frequently; automated builds and test suites verify every commit to catch defects early (GitHub, n.d.; Microsoft, 2023).</p></div>
+          <div class="box"><h4>Continuous Delivery &amp; Deployment (CD)</h4><p><b>Continuous Delivery</b> automatically prepares and tests release-ready artifacts for approval; <b>Continuous Deployment</b> automatically pushes every passing build straight to production (Microsoft, 2023; Sommerville, 2016).</p></div>
+        </div>
+
+        <figure>
+          <svg class="diagram" viewBox="0 0 640 132" role="img" aria-labelledby="doT doD">
+            <title id="doT">Interactive DevOps lifecycle diagram</title>
+            <desc id="doD">Eight continuous DevOps stages: Plan, Code, Build, Test, Release, Deploy, Operate, and Monitor returning to Plan.</desc>
+            <defs><marker id="ah3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" class="ar"/></marker></defs>
+            <g class="ph">
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="devops" data-stage="plan">
+                <rect x="4" y="18" width="68" height="48" rx="7"/><text x="38" y="39">1. Plan</text><text x="38" y="54" class="sm">backlog</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="devops" data-stage="code">
+                <rect x="84" y="18" width="68" height="48" rx="7"/><text x="118" y="39">2. Code</text><text x="118" y="54" class="sm">Git / PRs</text>
+              </g>
+              <g class="node-btn active" role="button" tabindex="0" aria-pressed="true" data-diagram="devops" data-stage="build">
+                <rect x="164" y="18" width="68" height="48" rx="7"/><text x="198" y="39">3. Build</text><text x="198" y="54" class="sm">CI compile</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="devops" data-stage="test">
+                <rect x="244" y="18" width="68" height="48" rx="7"/><text x="278" y="39">4. Test</text><text x="278" y="54" class="sm">CI checks</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="devops" data-stage="release">
+                <rect x="324" y="18" width="68" height="48" rx="7"/><text x="358" y="39">5. Release</text><text x="358" y="54" class="sm">CD stage</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="devops" data-stage="deploy">
+                <rect x="404" y="18" width="68" height="48" rx="7"/><text x="438" y="39">6. Deploy</text><text x="438" y="54" class="sm">prod IaC</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="devops" data-stage="operate">
+                <rect x="484" y="18" width="68" height="48" rx="7"/><text x="518" y="39">7. Operate</text><text x="518" y="54" class="sm">cloud ops</text>
+              </g>
+              <g class="node-btn" role="button" tabindex="0" aria-pressed="false" data-diagram="devops" data-stage="monitor">
+                <rect x="564" y="18" width="72" height="48" rx="7"/><text x="600" y="39">8. Monitor</text><text x="600" y="54" class="sm">telemetry</text>
+              </g>
+            </g>
+            <g class="ln"><path d="M72 42h12" marker-end="url(#ah3)"/><path d="M152 42h12" marker-end="url(#ah3)"/><path d="M232 42h12" marker-end="url(#ah3)"/><path d="M312 42h12" marker-end="url(#ah3)"/><path d="M392 42h12" marker-end="url(#ah3)"/><path d="M472 42h12" marker-end="url(#ah3)"/><path d="M552 42h12" marker-end="url(#ah3)"/></g>
+            <path d="M600 66v24H38V66" class="fb" marker-end="url(#ah3)"/>
+            <text x="320" y="108" class="cap-s" text-anchor="middle">Continuous feedback loop: Monitor telemetry flows back into Plan (click any stage to inspect)</text>
+          </svg>
+          <div class="stage-panel" aria-live="polite">
+            <div class="stage-panel-head">
+              <span class="stage-panel-title" id="devops-title">3. Build</span>
+              <span class="stage-badge" id="devops-badge">CI (Automated Build)</span>
+            </div>
+            <p id="devops-desc">Continuous Integration (CI) pipelines automatically compile source code, resolve dependencies, and package immutable build artifacts or container images on every commit (GitHub, n.d.).</p>
+            <div class="stage-pills" role="group" aria-label="Select DevOps stage">
+              <button type="button" class="stage-pill" data-diagram="devops" data-stage="plan" aria-pressed="false">1. Plan</button>
+              <button type="button" class="stage-pill" data-diagram="devops" data-stage="code" aria-pressed="false">2. Code</button>
+              <button type="button" class="stage-pill" data-diagram="devops" data-stage="build" aria-pressed="true">3. Build</button>
+              <button type="button" class="stage-pill" data-diagram="devops" data-stage="test" aria-pressed="false">4. Test</button>
+              <button type="button" class="stage-pill" data-diagram="devops" data-stage="release" aria-pressed="false">5. Release</button>
+              <button type="button" class="stage-pill" data-diagram="devops" data-stage="deploy" aria-pressed="false">6. Deploy</button>
+              <button type="button" class="stage-pill" data-diagram="devops" data-stage="operate" aria-pressed="false">7. Operate</button>
+              <button type="button" class="stage-pill" data-diagram="devops" data-stage="monitor" aria-pressed="false">8. Monitor</button>
+            </div>
+          </div>
+          <figcaption><b>Figure 3.</b> The eight-stage DevOps lifecycle linking continuous integration, delivery, and operations (Microsoft, 2023).</figcaption>
+        </figure>
+
+        <h3>3.2 Comparison of software development methodologies</h3>
+        <div class="comp-filters" role="group" aria-label="Highlight methodology column">
+          <span>Highlight:</span>
+          <button type="button" class="stage-pill" data-comp-col="all" aria-pressed="true">Show All</button>
+          <button type="button" class="stage-pill" data-comp-col="1" aria-pressed="false">Waterfall</button>
+          <button type="button" class="stage-pill" data-comp-col="2" aria-pressed="false">RAD</button>
+          <button type="button" class="stage-pill" data-comp-col="3" aria-pressed="false">Agile / Scrum</button>
+          <button type="button" class="stage-pill" data-comp-col="4" aria-pressed="false">DevOps</button>
+        </div>
+        <div class="table-wrap">
+          <table class="compact" id="compTable">
+            <caption><b>Table 1.</b> Waterfall, RAD, Agile/Scrum, and DevOps compared (Pressman &amp; Maxim, 2020; Sommerville, 2016; Schwaber &amp; Sutherland, 2020; Microsoft, 2023).</caption>
+            <thead>
+              <tr>
+                <th scope="col">Dimension</th>
+                <th scope="col" data-col="1">Waterfall</th>
+                <th scope="col" data-col="2">RAD</th>
+                <th scope="col" data-col="3">Agile / Scrum</th>
+                <th scope="col" data-col="4">DevOps</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Requirements</th><td>Fixed upfront in formal SRS</td><td>Timeboxed JAD workshops &amp; prototypes</td><td>Emergent Product Backlog refined each Sprint</td><td>Continuous backlog driven by live telemetry</td></tr>
+              <tr><th scope="row">Delivery cadence</th><td>Single release at project end</td><td>Fast 60&ndash;90 day incremental delivery</td><td>Usable Increment every 1&ndash;4 week Sprint</td><td>Multiple automated deployments per day/week</td></tr>
+              <tr><th scope="row">User involvement</th><td>At initial specification and final acceptance</td><td>Intensive during joint prototyping</td><td>Continuous via Product Owner &amp; Sprint Reviews</td><td>Continuous via real-time monitoring &amp; feedback</td></tr>
+              <tr><th scope="row">Testing &amp; QA</th><td>Dedicated phase after coding completes</td><td>Component &amp; prototype testing during build</td><td>Integrated within every Sprint (Definition of Done)</td><td>Automated CI/CD unit, security &amp; integration gates</td></tr>
+              <tr><th scope="row">Best suited for</th><td>Safety-critical, compliance &amp; stable systems</td><td>Modular business apps with tight deadlines</td><td>Complex products with evolving user needs</td><td>Cloud, SaaS &amp; microservice platforms</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note" id="compNote">Click a methodology button above or any column header to highlight its characteristics.</p>
+
+        <div class="callout"><strong>3.3 The Fish Model (parallel verification &amp; validation).</strong> Shaped like a fish—from requirements at the head, through analysis, design, coding, and system build along the central spine, to maintenance at the tail—the <b>Fish Model</b> assigns two independent teams to every phase: one conducts static <em>verification (reviews)</em> on the upper fin while another conducts dynamic <em>validation (testing)</em> on the lower fin. Though time-consuming and costly, it delivers maximum defect prevention for high-assurance systems.</div>
+      </div>
+    </section>
+
+    <!-- PAGE 5: CONCLUSION AND REFERENCES -->
+    <section class="page" id="page-5" data-title="Conclusion and References" aria-labelledby="t5" hidden>
+      <div class="page-inner">
+        <h2 id="t5"><span class="num">4</span> Conclusion and References</h2>
+        <p>No single methodology fits every software project (Pressman &amp; Maxim, 2020; Sommerville, 2016). Traditional models such as Waterfall and the Fish Model provide predictability and rigorous documentation when requirements are stable or safety-critical, whereas RAD, Agile/Scrum, and DevOps enable rapid adaptation, stakeholder collaboration, and continuous automated delivery in dynamic environments.</p>
+
+        <h3>4.1 Key takeaways</h3>
+        <div class="takeaways">
+          <div><b>Waterfall</b><span>Linear phases; best for fixed, regulated specifications.</span></div>
+          <div><b>RAD</b><span>Prototypes &amp; reusable components in 60&ndash;90 days.</span></div>
+          <div><b>Agile &amp; Scrum</b><span>Empirical 1&ndash;4 week Sprints and backlog adaptation.</span></div>
+          <div><b>DevOps &amp; CI/CD</b><span>Unites Dev and Ops with automated build, test, and deploy.</span></div>
+          <div><b>Fish Model</b><span>Parallel review (verification) and test (validation) fins.</span></div>
+          <div><b>Context rules</b><span>Match the model to risk, team culture, and volatility.</span></div>
+        </div>
+
+        <section class="example" aria-labelledby="exT">
+          <h3 id="exT">4.2 Practical example: selecting a methodology <small>(illustrative, prepared for this assignment)</small></h3>
+          <p>An engineering consultancy evaluates three new projects and selects a tailored methodology for each:</p>
+          <div class="table-wrap">
+            <table class="compact">
+              <caption><b>Table 2.</b> Methodology selection across three practical software scenarios.</caption>
+              <thead><tr><th scope="col">Project scenario</th><th scope="col">Key constraints</th><th scope="col">Selected methodology</th><th scope="col">Engineering rationale</th></tr></thead>
+              <tbody>
+                <tr><td><b>P-01:</b> Avionics flight-control firmware</td><td>Fixed regulatory standards; zero fault tolerance</td><td><span class="tag warn">Waterfall / Fish</span></td><td>Requires upfront SRS baselining, formal traceability, and parallel V&amp;V audits at every phase.</td></tr>
+                <tr><td><b>P-02:</b> University hostel &amp; fee portal</td><td>Modular CRUD forms; 75-day launch before admissions</td><td><span class="tag pass">RAD</span></td><td>Staff co-design UI prototypes and assemble pre-built authentication and payment components rapidly.</td></tr>
+                <tr><td><b>P-03:</b> Cloud UPI &amp; retail shopping app</td><td>Evolving market features; 24/7 uptime required</td><td><span class="tag pass">Scrum + DevOps</span></td><td>Two-week Sprints prioritise user stories while GitHub Actions CI/CD automates daily testing and deployment.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <h3>4.3 References</h3>
+        <ul class="refs">
+          <li>Beck, K., Beedle, M., van Bennekum, A., Cockburn, A., Cunningham, W., Fowler, M., Grenning, J., Highsmith, J., Hunt, A., Jeffries, R., Kern, J., Marick, B., Martin, R. C., Mellor, S., Schwaber, K., Sutherland, J., &amp; Thomas, D. (2001). <i>Manifesto for Agile Software Development</i>. <a href="https://agilemanifesto.org/" target="_blank" rel="noopener">https://agilemanifesto.org/</a></li>
+          <li>GitHub. (n.d.). <i>Understanding GitHub Actions</i>. GitHub Docs. Retrieved October 26, 2026, from <a href="https://docs.github.com/en/actions/about-github-actions/understanding-github-actions" target="_blank" rel="noopener">https://docs.github.com/en/actions/about-github-actions/understanding-github-actions</a></li>
+          <li>Martin, J. (1991). <i>Rapid application development</i>. Macmillan Publishing Company.</li>
+          <li>Microsoft. (2023, January 24). <i>What is DevOps?</i> Microsoft Learn. <a href="https://learn.microsoft.com/en-us/devops/what-is-devops" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/devops/what-is-devops</a></li>
+          <li>Pressman, R. S., &amp; Maxim, B. R. (2020). <i>Software engineering: A practitioner&rsquo;s approach</i> (9th ed.). McGraw-Hill Education.</li>
+          <li>Royce, W. W. (1970). Managing the development of large software systems. In <i>Proceedings of IEEE WESCON</i> (Vol. 26, pp. 1&ndash;9). IEEE.</li>
+          <li>Schwaber, K., &amp; Sutherland, J. (2020, November). <i>The Scrum guide: The definitive guide to Scrum: The rules of the game</i>. <a href="https://scrumguides.org/scrum-guide.html" target="_blank" rel="noopener">https://scrumguides.org/scrum-guide.html</a></li>
+          <li>Sommerville, I. (2016). <i>Software engineering</i> (10th ed.). Pearson.</li>
+        </ul>
+        <p class="note">Note. In-text citations and the reference list follow APA 7th edition. The project selection scenarios in Table 2 are illustrative and were created for teaching purposes.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="controls">
+  <div class="progress" id="progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20"><div id="bar"></div></div>
+  <div class="nav">
+    <button class="btn nav-btn" id="prevBtn" aria-label="Previous page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>Previous</span></button>
+    <p class="indicator" id="indicator" aria-live="polite">Page 1 of 5</p>
+    <button class="btn nav-btn" id="nextBtn" aria-label="Next page"><span>Next</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
